@@ -29,7 +29,7 @@
         var markers = L.markerClusterGroup();
         var geojsonLayer = L.geoJSON(geojsonData, {
             onEachFeature: function (feature, layer) {
-                layer.bindPopup('Number of thefts: <br/>' + feature.properties.STOLEN_VAL);
+                layer.bindPopup('Theft value: <br/>$' + feature.properties.STOLEN_VAL);
             }
         });
         markers.addLayer(geojsonLayer);
