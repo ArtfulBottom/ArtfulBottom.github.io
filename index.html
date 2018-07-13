@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css"/>
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js"></script>
-    <script src="test.js"></script>
+    <script src="bicycle_thefts_Part1.js"></script>
     <style>
         body {
             padding: 0;
@@ -28,7 +28,7 @@
         });
 
         var markers = L.markerClusterGroup();
-        var geojsonLayer = L.geoJSON(data, {
+        var geojsonLayer = L.geoJSON(geojsonData, {
             onEachFeature: function (feature, layer) {
                 layer.bindPopup('Number of thefts: <br/>' + feature.properties.STOLEN_VAL);
             }
