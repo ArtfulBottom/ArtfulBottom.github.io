@@ -27,6 +27,7 @@
         var map = L.map('map').setView([-41.2858, 174.78682], 14);
         var bicycleLayer = new L.geoJSON(geojsonData);
         bicycleLayer.addTo(map);
+        map.fitBounds(bicycleLayer.getBounds());
 
         L.tileLayer(
             'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
